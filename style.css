@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League+Spartan',snas-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: black;
+}
+
+h2{
+    font-size: 46px;
+   
+    color: black;
+}
+
+h4{
+    font-size: 20px;
+   
+    color: black;
+}
+
+h6{
+    font-size: 12px;
+    font-weight: 700;
+   
+    
+}
+
+p{
+    font-size: 16px;
+    color: grey;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+body{
+
+    width: 100%;
+}
+
+/* Header Start */
+
+.logo{
+    /* background: rgb(232, 165, 165); */
+}
+
+
+
+#header{
+    display: flex;
+    background-color: rgb(182, 201, 203);
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    
+}
+
+
+#menu{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu li{
+   
+   list-style: none;
+   padding: 0 20px;
+   position: relative;
+}
+
+#menu li a{
+   
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    transition: 0.3s ease;
+
+ }
+
+
+ #menu li a:hover,
+ #menu li a.active
+ 
+ {
+   
+   
+    color: #377792;
+
+ }
+
+
+ #menu li a.active::after,
+ #menu li a:hover::after
+ 
+ {
+   content: "";
+   width: 30%;
+   height: 2px;
+   background:#377792 ;
+   position: absolute;
+   bottom: -4px;
+   left: 20px;
+   
+
+ }
