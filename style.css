@@ -1,111 +1,108 @@
-
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'League+Spartan',snas-serif;
+    font-family: 'League Spartan', sans-serif; /* Fixed typo 'snas-serif' to 'sans-serif' */
 }
 
-h1{
+h1 {
     font-size: 50px;
     line-height: 64px;
     color: black;
 }
 
-h2{
+h2 {
     font-size: 46px;
-   
     color: black;
 }
 
-h4{
+h4 {
     font-size: 20px;
-   
     color: black;
 }
 
-h6{
+h6 {
     font-size: 12px;
     font-weight: 700;
-   
-    
 }
 
-p{
+p {
     font-size: 16px;
     color: grey;
     margin: 15px 0 20px 0;
 }
 
-.section-p1{
+.section-p1 {
     padding: 40px 80px;
 }
 
-.section-m1{
+.section-m1 {
     margin: 40px 0;
 }
 
-body{
-
+body {
     width: 100%;
 }
 
 /* Header Start */
-
-.logo{
-    /* background: rgb(232, 165, 165); */
-}
-
-
-
-#header{
+#header {
     display: flex;
     background-color: rgb(182, 201, 203);
     align-items: center;
     justify-content: space-between;
     padding: 20px 80px;
+<<<<<<< HEAD
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+=======
     box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-    
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+>>>>>>> parent of b7e27e4 (finished)
 }
 
-
-#menu{
-   
+#menu {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#menu li{
-   
-   list-style: none;
-   padding: 0 20px;
-   position: relative;
+#menu li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
 }
 
-#menu li a{
-   
+#menu li a {
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     color: #000;
-    transition: 0.3s ease;
+    transition: color 0.3s ease; /* Only transition color */
+}
 
- }
-
-
- #menu li a:hover,
- #menu li a.active
- 
- {
-   
-   
+#menu li a:hover,
+#menu li a.active {
     color: #377792;
+}
 
- }
+#menu li a.active::after,
+#menu li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #377792;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
 
+<<<<<<< HEAD
+#hero {
+=======
 
  #menu li a.active::after,
  #menu li a:hover::after
@@ -123,30 +120,20 @@ body{
  }
 
 
-<<<<<<< HEAD
  #hero {
+>>>>>>> parent of b7e27e4 (finished)
     background: url('img/hero4.png') no-repeat center center/cover; /* Replace with your image */
     height: 90vh;
-    width: 100% ;
-    background-size: cover;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     padding: 0 80px;
-   
-   
-    
-  
-   
 }
 
-
-
 #hero h4 {
-    
     padding-bottom: 15px;
-  
 }
 
 #hero h2 {
@@ -156,7 +143,6 @@ body{
 }
 
 #hero h1 {
-    
     color: rgb(64, 127, 96);
 }
 
@@ -166,18 +152,15 @@ body{
 }
 
 #hero .btn {
-   background-image: url('img/button.png');
-   background-color: transparent;
-   color: rgb(12, 76, 76);
-   border: 0;
-   padding: 14px 80px 14px 65px;
-   cursor: pointer;
-   font-size: 15px;
-   font-weight: 700;
-   
+    background-image: url('img/button.png');
+    background-color: transparent;
+    color: rgb(12, 76, 76);
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
 }
-
-
 
 #feature {
     display: flex;
@@ -186,10 +169,6 @@ body{
     flex-wrap: wrap;
     padding: 40px 0;
     background-color: #f9f9f9;
-}
-
-.section-p1 {
-    padding: 40px 0;
 }
 
 .fe-box {
@@ -211,14 +190,6 @@ body{
     margin-bottom: 20px;
 }
 
-
-
-
-
-
-
-
-
 #feature .fe-box h6 {
     font-size: 18px;
     font-weight: 600;
@@ -228,65 +199,35 @@ body{
     color: #095f37;
     background-color: #e1e7d8;
     padding: 9px 8px 6px 8px;
-   
 }
-
-
-
-
-
-
 
 #feature .fe-box:nth-child(2) h6 {
-
     background-color: rgb(200, 248, 200);
- 
 }
 
-
-
 #feature .fe-box:nth-child(3) h6 {
-
     background-color: rgb(200, 207, 248);
- 
 }
 
 #feature .fe-box:nth-child(4) h6 {
-
     background-color: rgb(248, 200, 246);
- 
 }
 
 #feature .fe-box:nth-child(5) h6 {
-
     background-color: rgb(248, 200, 214);
- 
 }
 
 #feature .fe-box:nth-child(6) h6 {
-
     background-color: rgb(248, 223, 200);
- 
 }
-
-
 
 .fe-box:hover {
     transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-    #feature {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .fe-box {
-        width: 100%;
-        margin-bottom: 20px;
-=======
-
- #product1 {
+<<<<<<< HEAD
+/* Product Section */
+#product1 {
     text-align: center;
     padding: 40px 0;
 }
@@ -354,7 +295,6 @@ body{
 
 .pro a {
     color: #333;
-    /* background-color: #ff6b6b; */
     padding: 10px 15px;
     border-radius: 5px;
     font-size: 18px;
@@ -362,10 +302,7 @@ body{
     transition: background-color 0.3s ease;
 }
 
-.pro a:hover {
-    /* background-color: #ff3b3b; */
-}
-
+/* Responsive adjustments for products */
 @media (max-width: 768px) {
     .pro {
         width: 48%;
@@ -378,7 +315,7 @@ body{
     }
 }
 
-
+/* Banner Sections */
 #banner {
     display: flex;
     flex-direction: column;
@@ -455,207 +392,199 @@ body{
 
 #sm-banner .banner-box:hover button {
     background: #1a8467;
-    border: 1px solid #0a614a;
+    color: #fff;
 }
 
-/* Add smooth transition to buttons for hover effect */
-#banner button, #sm-banner button {
-    transition: background 0.3s ease, color 0.3s ease;
+#sm-banner .banner-box button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
 }
 
-#banner3 {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 50px;
-    gap: 20px; /* Adds space between the banners */
+/* Footer */
+footer {
+    background-color: #282828;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
 
-#banner3 .banner-box {
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/* General Styles */
+.section-p1 {
+    padding: 40px 80px;
+    background-color: #f9f9f9; /* Ensures sections have a light background */
+}
+
+.banner-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    min-width: 250px; /* Ensures each banner box has a minimum width */
-    height: 30vh; /* Set consistent height for the banners */
-    background-size: cover;
-    background-position: center;
+    background-color: #fff;
+    border-radius: 10px;
     padding: 20px;
-    margin-bottom: 20px; /* Space at the bottom */
-    transition: transform 0.3s ease, background 0.3s ease; /* Smooth hover effect */
+    margin: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 45%; /* Adjust width for responsiveness */
 }
 
-#banner3 .banner-box:hover {
-    transform: scale(1.05); /* Slightly enlarge the banner on hover */
+.banner-box2 {
+    background-image: url("img/banner/b2.jpg"); /* Example background image */
+    background-size: cover;
 }
 
-/* Specific background images for each banner box */
-#banner3 .banner-box {
-    background-image: url("img/banner/b7.jpg"); /* Default background for the first banner */
+.banner-box3 {
+    background-image: url("img/banner/b3.jpg"); /* Example background image */
+    background-size: cover;
 }
 
-#banner3 .banner-box2 {
-    background-image: url("img/banner/b4.jpg"); /* Background for the second banner */
+.banner-box h4, 
+.banner-box h2, 
+.banner-box h3, 
+.banner-box span {
+    color: #333; /* Uniform text color */
 }
 
-#banner3 .banner-box3 {
-    background-image: url("img/banner/b18.jpg"); /* Background for the third banner */
+.banner-box h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-#banner3 h2 {
-    color: #fff;
-    font-weight: 900;
-    font-size: 25px;
-    margin: 0; /* Ensure there's no unwanted margin */
+.banner-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-#banner3 h3 {
-    color: #c61010; /* Red color for emphasis */
-    font-weight: 800;
-    font-size: 15px;
-    margin: 10px 0 0 0; /* Adds space between the h2 and h3 */
+.banner-box h3 {
+    font-size: 18px;
+    color: #ff6b6b; /* Highlight for sale items */
 }
 
-/* Media query for small screens */
-@media (max-width: 768px) {
-    #banner3 {
-        padding: 0 20px; /* Reduce padding on smaller screens */
-    }
-
-    #banner3 .banner-box {
-        min-width: 100%; /* Banners will take full width on smaller screens */
-        height: auto; /* Adjust height to auto for better responsiveness */
-    }
+.banner-box span {
+    font-size: 16px;
+    color: #555; /* Grey text for description */
 }
 
+.banner-box button {
+    background-color: #377792; /* Button background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
+.banner-box button:hover {
+    background-color: #1a8467; /* Darker shade on hover */
+}
+
+/* Newsletter Section */
 #newsletter {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    background-color: #f1f1f1;
-    padding: 30px 50px;
-    border-radius: 8px;
-    margin: 50px 0;
-    flex-wrap: wrap;
+    text-align: center;
 }
 
-#newsletter .newsletter-text h4 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #333;
-}
-
-#newsletter .newsletter-text p {
-    font-size: 16px;
-    color: #666;
-    margin-top: 10px;
+.newsletter-text {
+    margin-bottom: 20px;
 }
 
 .newsletter-form {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
 }
 
-.newsletter-form input[type="email"] {
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 1px solid #ccc;
+.newsletter-form input {
+    padding: 10px;
     border-radius: 5px;
-    outline: none;
-    flex-grow: 1;
-    min-width: 250px;
-}
-
-.newsletter-form button {
-    padding: 10px 25px;
-    font-size: 16px;
-    background-color: #0aeca8;
-    color: white;
-   
-}
-
-
-
-#footer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding: 30px 50px;
-    background-color: #ffffff;
-    color: white;
-    gap: 20px;
-}
-
-#footer .col {
-    flex: 1;
-    margin-bottom: 20px;
-}
-
-#footer .logo {
-    width: 150px;
-    margin-bottom: 20px;
-}
-
-#footer h4 {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-#footer p, #footer a {
-    font-size: 14px;
-    color: #bbb;
-    text-decoration: none;
-    margin-bottom: 10px;
-    display: block;
-}
-
-#footer a:hover {
-    color: white;
-}
-
-#footer .social-icons a {
-    display: inline-block;
+    border: 1px solid #ccc;
     margin-right: 10px;
-    color: #000000;
-    font-size: 18px;
 }
 
-.social-icons a:hover {
-    color: #f9c900; /* Change color on hover */
+.newsletter-form .btn {
+    background-color: #377792;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.app-icons img {
-    width: 120px;
-    margin: 10px 0;
+.newsletter-form .btn:hover {
+    background-color: #1a8467; /* Darker shade on hover */
 }
 
-#footer .install p {
+/* Footer Section */
+footer {
+    background-color: #282828;
+    color: #fff;
+    padding: 20px 80px;
+}
+
+footer .col {
+    margin-bottom: 20px;
+}
+
+footer .col h4 {
     margin-bottom: 15px;
 }
 
-#footer .install img {
-    width: 100px;
-    margin: 5px;
+footer .social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-#footer .copyright {
-    flex-basis: 100%;
-    text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid #555;
-    padding-top: 10px;
-    font-size: 12px;
-    color: #bbb;
+footer .social-icons a:hover {
+    color: #ff6b6b; /* Highlight on hover */
 }
 
-/* Responsive Design */
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    #footer {
+    .banner-box {
+        width: 100%; /* Full width on smaller screens */
+=======
+@media (max-width: 768px) {
+    #feature {
         flex-direction: column;
-        text-align: center;
->>>>>>> parent of 7970446 (Merge branch 'main' into FeaturedProduct-Section)
+        padding: 20px;
+    }
+
+    .fe-box {
+        width: 100%;
+        margin-bottom: 20px;
+>>>>>>> parent of b7e27e4 (finished)
+    }
+    
+    .section-p1 {
+        padding: 20px; /* Reduce padding */
+    }
+
+    footer {
+        padding: 20px 10px; /* Adjust footer padding */
     }
 }
