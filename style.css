@@ -53,15 +53,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 20px 80px;
-<<<<<<< HEAD
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-=======
-    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-    z-index: 999;
-    position: sticky;
-    top: 0;
-    left: 0;
->>>>>>> parent of b7e27e4 (finished)
 }
 
 #menu {
@@ -100,9 +92,9 @@ body {
     left: 20px;
 }
 
-<<<<<<< HEAD
+
 #hero {
-=======
+
 
  #menu li a.active::after,
  #menu li a:hover::after
@@ -120,8 +112,9 @@ body {
  }
 
 
+
  #hero {
->>>>>>> parent of b7e27e4 (finished)
+
     background: url('img/hero4.png') no-repeat center center/cover; /* Replace with your image */
     height: 90vh;
     width: 100%;
@@ -225,7 +218,6 @@ body {
     transform: scale(1.05);
 }
 
-<<<<<<< HEAD
 /* Product Section */
 #product1 {
     text-align: center;
@@ -563,28 +555,4 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .banner-box {
-        width: 100%; /* Full width on smaller screens */
-=======
-@media (max-width: 768px) {
-    #feature {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .fe-box {
-        width: 100%;
-        margin-bottom: 20px;
->>>>>>> parent of b7e27e4 (finished)
-    }
-    
-    .section-p1 {
-        padding: 20px; /* Reduce padding */
-    }
-
-    footer {
-        padding: 20px 10px; /* Adjust footer padding */
-    }
 }
