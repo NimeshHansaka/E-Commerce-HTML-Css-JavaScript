@@ -1,204 +1,162 @@
+
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'League Spartan', sans-serif; /* Fixed typo 'snas-serif' */
+    font-family: 'League+Spartan',snas-serif;
 }
 
-h1 {
+h1{
     font-size: 50px;
     line-height: 64px;
     color: black;
 }
 
-h2 {
+h2{
     font-size: 46px;
+   
     color: black;
 }
 
-h4 {
+h4{
     font-size: 20px;
+   
     color: black;
 }
 
-h6 {
+h6{
     font-size: 12px;
     font-weight: 700;
+   
+    
 }
 
-p {
+p{
     font-size: 16px;
     color: grey;
     margin: 15px 0 20px 0;
 }
 
-.section-p1 {
+.section-p1{
     padding: 40px 80px;
 }
 
-.section-m1 {
+.section-m1{
     margin: 40px 0;
 }
 
-body {
+body{
+
     width: 100%;
 }
 
-/* Header Styles */
-#header {
+/* Header Start */
+
+
+
+
+
+#header{
     display: flex;
     background-color: rgb(182, 201, 203);
     align-items: center;
     justify-content: space-between;
     padding: 20px 80px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
     z-index: 999;
     position: sticky;
     top: 0;
     left: 0;
 }
 
-#menu {
+
+#menu{
+   
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#menu li {
-    list-style: none;
-    padding: 0 20px;
-    position: relative;
+#menu li{
+   
+   list-style: none;
+   padding: 0 20px;
+   position: relative;
 }
 
-#menu li a {
+#menu li a{
+   
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     color: #000;
-    transition: color 0.3s ease;
-}
+    transition: 0.3s ease;
 
-#menu li a:hover,
-#menu li a.active {
+ }
+
+
+ #menu li a:hover,
+ #menu li a.active
+ 
+ {
+   
+   
     color: #377792;
+
+ }
+
+
+ #menu li a.active::after,
+ #menu li a:hover::after
+ 
+ {
+   content: "";
+   width: 30%;
+   height: 2px;
+   background:#377792 ;
+   position: absolute;
+   bottom: -4px;
+   left: 20px;
+   
+
+ }
+
+ 
+
+#feature .fe-box:nth-child(5) h6 {
+
+    background-color: rgb(248, 200, 214);
+ 
 }
 
-#menu li a.active::after,
-#menu li a:hover::after {
-    content: "";
-    width: 30%;
-    height: 2px;
-    background: #377792;
-    position: absolute;
-    bottom: -4px;
-    left: 20px;
+#feature .fe-box:nth-child(6) h6 {
+
+    background-color: rgb(248, 223, 200);
+ 
 }
 
-/* Hero Section */
-#hero {
-    background-color: #377792; /* Main background color for the hero section */
-    color: white; /* Text color */
-    text-align: center; /* Centered text */
-    padding: 80px 20px; /* Padding for spacing */
-    position: relative; /* To position elements */
-}
 
-#hero h4 {
-    font-size: 20px; /* Font size for h4 */
-    font-weight: 400; /* Light weight */
-    margin-bottom: 10px; /* Spacing below h4 */
-}
-
-#hero h2 {
-    font-size: 36px; /* Font size for h2 */
-    margin: 10px 0; /* Margin for spacing */
-}
-
-#hero h1 {
-    font-size: 50px; /* Font size for h1 */
-    margin: 20px 0; /* Margin for spacing */
-}
-
-#hero p {
-    font-size: 18px; /* Font size for paragraph */
-    margin: 20px 0; /* Margin for spacing */
-}
-
-#hero .btn {
-    background-color: #ff6b6b; /* Button background color */
-    color: white; /* Button text color */
-    padding: 15px 30px; /* Padding for the button */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Font size for button */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Transition for hover effect */
-}
-
-#hero .btn:hover {
-    background-color: #ff4747; /* Darker shade on hover */
-}
-
-/* Feature Section */
-#feature {
-    display: flex; /* Flexbox layout */
-    justify-content: space-between; /* Space between items */
-    flex-wrap: wrap; /* Wrap items to the next line */
-    padding: 40px 20px; /* Padding for spacing */
-    background-color: #f9f9f9; /* Background color for feature section */
-}
-
-.fe-box {
-    flex: 1 1 calc(33% - 40px); /* Flexible width for each feature box */
-    margin: 10px; /* Margin for spacing */
-    text-align: center; /* Centered text */
-    padding: 20px; /* Padding for inner spacing */
-    background-color: white; /* Background color for feature boxes */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s ease; /* Smooth transition on hover */
-}
 
 .fe-box:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.05);
 }
 
-.fe-box img {
-    max-width: 100%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 15px; /* Spacing below the image */
-}
-
-.fe-box h6 {
-    font-size: 18px; /* Font size for feature titles */
-    font-weight: 600; /* Bold weight */
-    color: #333; /* Dark text color */
-}
-
-/* Responsive Adjustments */
 @media (max-width: 768px) {
-    #hero {
-        padding: 60px 20px; /* Adjust padding for smaller screens */
-    }
-
-    #hero h1 {
-        font-size: 36px; /* Smaller h1 for mobile */
-    }
-
     #feature {
-        flex-direction: column; /* Stack feature boxes vertically */
-        align-items: center; /* Center align */
+        flex-direction: column;
+        padding: 20px;
     }
 
     .fe-box {
-        flex: 1 1 100%; /* Full width on small screens */
-        max-width: 400px; /* Limit max width */
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
 
-#product1 {
+
+ #product1 {
     text-align: center;
     padding: 40px 0;
 }
@@ -266,6 +224,7 @@ body {
 
 .pro a {
     color: #333;
+    /* background-color: #ff6b6b; */
     padding: 10px 15px;
     border-radius: 5px;
     font-size: 18px;
@@ -273,7 +232,8 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Responsive Adjustments for Product Boxes */
+
+
 @media (max-width: 768px) {
     .pro {
         width: 48%;
@@ -286,7 +246,7 @@ body {
     }
 }
 
-/* Banner Styles */
+
 #banner {
     display: flex;
     flex-direction: column;
@@ -335,7 +295,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     background-image: url("img/banner/b17.jpg");
-    min-width: 580px; /* Minimum width */
+    min-width: 580px; /* Ensures each banner box has a minimum width */
     height: 40vh;
     background-size: cover;
     background-position: center;
@@ -366,18 +326,17 @@ body {
     border: 1px solid #0a614a;
 }
 
-/* Button Transitions */
+/* Add smooth transition to buttons for hover effect */
 #banner button, #sm-banner button {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Banner 3 Styles */
 #banner3 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 50px;
-    gap: 20px; /* Space between the banners */
+    gap: 20px; /* Adds space between the banners */
 }
 
 #banner3 .banner-box {
@@ -385,8 +344,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    min-width: 250px; /* Minimum width */
-    height: 30vh; /* Consistent height */
+    min-width: 250px; /* Ensures each banner box has a minimum width */
+    height: 30vh; /* Set consistent height for the banners */
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -395,99 +354,175 @@ body {
 }
 
 #banner3 .banner-box:hover {
-    transform: scale(1.05); /* Enlarge banner on hover */
+    transform: scale(1.05); /* Slightly enlarge the banner on hover */
 }
 
 /* Specific background images for each banner box */
 #banner3 .banner-box {
-    background-image: url("img/banner/b7.jpg"); /* Default background */
+    background-image: url("img/banner/b7.jpg"); /* Default background for the first banner */
 }
 
 #banner3 .banner-box2 {
-    background-image: url("img/banner/b4.jpg"); /* Second banner background */
+    background-image: url("img/banner/b4.jpg"); /* Background for the second banner */
 }
 
 #banner3 .banner-box3 {
-    background-image: url("img/banner/b18.jpg"); /* Third banner background */
+    background-image: url("img/banner/b18.jpg"); /* Background for the third banner */
 }
 
 #banner3 h2 {
     color: #fff;
     font-weight: 900;
     font-size: 25px;
-    margin: 0; /* No unwanted margin */
+    margin: 0; /* Ensure there's no unwanted margin */
 }
 
 #banner3 h3 {
-    color: #c61010; /* Emphasis color */
+    color: #c61010; /* Red color for emphasis */
     font-weight: 800;
     font-size: 15px;
-    margin: 10px 0 0 0; /* Space between h2 and h3 */
+    margin: 10px 0 0 0; /* Adds space between the h2 and h3 */
 }
 
 /* Media query for small screens */
 @media (max-width: 768px) {
     #banner3 {
-        padding: 0 20px; /* Reduced padding */
+        padding: 0 20px; /* Reduce padding on smaller screens */
     }
 
     #banner3 .banner-box {
-        min-width: 100%; /* Full width on smaller screens */
-        height: auto; /* Auto height */
+        min-width: 100%; /* Banners will take full width on smaller screens */
+        height: auto; /* Adjust height to auto for better responsiveness */
     }
 }
 
-/* Newsletter Styles */
+
 #newsletter {
-    background-color: #f0f0f0;
-    padding: 40px 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    background-color: #f1f1f1;
+    padding: 30px 50px;
+    border-radius: 8px;
+    margin: 50px 0;
+    flex-wrap: wrap;
 }
 
-#newsletter h2 {
-    font-size: 32px;
+#newsletter .newsletter-text h4 {
+    font-size: 24px;
+    font-weight: 700;
     color: #333;
-    margin-bottom: 20px; /* Space below the title */
 }
 
-#newsletter p {
+#newsletter .newsletter-text p {
     font-size: 16px;
     color: #666;
-    margin-bottom: 30px; /* Space below the paragraph */
+    margin-top: 10px;
 }
 
-#newsletter input[type="email"] {
-    width: 300px; /* Width for desktop */
-    padding: 10px;
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px 15px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    outline: none;
+    flex-grow: 1;
+    min-width: 250px;
+}
+
+.newsletter-form button {
+    padding: 10px 25px;
+    font-size: 16px;
+    background-color: #0aeca8;
+    color: white;
+   
+}
+
+
+
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 30px 50px;
+    background-color: #ffffff;
+    color: white;
+    gap: 20px;
+}
+
+#footer .col {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+#footer .logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+#footer h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#footer p, #footer a {
+    font-size: 14px;
+    color: #bbb;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#footer a:hover {
+    color: white;
+}
+
+#footer .social-icons a {
+    display: inline-block;
     margin-right: 10px;
+    color: #000000;
+    font-size: 18px;
 }
 
-#newsletter button {
-    padding: 10px 20px;
-    background-color: #377792;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.social-icons a:hover {
+    color: #f9c900; /* Change color on hover */
 }
 
-#newsletter button:hover {
-    background-color: #2c5b6e; /* Darker shade on hover */
+.app-icons img {
+    width: 120px;
+    margin: 10px 0;
 }
 
-/* Responsive adjustments for Newsletter */
+#footer .install p {
+    margin-bottom: 15px;
+}
+
+#footer .install img {
+    width: 100px;
+    margin: 5px;
+}
+
+#footer .copyright {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #bbb;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    #newsletter {
-        flex-direction: column; /* Stack elements */
-    }
-
-    #newsletter input[type="email"] {
-        width: 100%; /* Full width */
-        margin-bottom: 10px; /* Space below input */
+    #footer {
+        flex-direction: column;
+        text-align: center;
     }
 }
