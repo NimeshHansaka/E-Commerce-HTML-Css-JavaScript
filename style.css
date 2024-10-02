@@ -47,6 +47,36 @@ p{
     margin: 40px 0;
 }
 
+
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+
+}
+
+
+button.white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 30px;
+    color: #ffffff;
+    background-color: transparent;
+   
+    
+    border:1px solid white;
+    outline: none;
+    transition: 0.2s;
+
+}
+
+
 body{
 
     width: 100%;
@@ -213,5 +243,286 @@ body{
 @media (max-width: 480px) {
     .pro {
         width: 100%;
+    }
+}
+
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("img/banner/b2.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h4 {
+    color: #fff;
+    font-size: 16px;
+}
+
+#banner h2 {
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+#banner h2 span {
+    color: #880b0b; /* Dark red color */
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+#banner button:hover {
+    background: #1a8467;
+    color: #fff;
+}
+
+/* Small Banners Section */
+#sm-banner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sm-banner .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("img/banner/b17.jpg");
+    min-width: 580px; /* Ensures each banner box has a minimum width */
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+#sm-banner .banner-box2 {
+    min-width: 580px;
+    background-image: url("img/banner/b10.jpg");
+}
+
+#sm-banner h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#sm-banner span {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button {
+    background: #1a8467;
+    border: 1px solid #0a614a;
+}
+
+/* Add smooth transition to buttons for hover effect */
+#banner button, #sm-banner button {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#banner3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 50px;
+    gap: 20px; /* Adds space between the banners */
+}
+
+#banner3 .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 250px; /* Ensures each banner box has a minimum width */
+    height: 30vh; /* Set consistent height for the banners */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px; /* Space at the bottom */
+    transition: transform 0.3s ease, background 0.3s ease; /* Smooth hover effect */
+}
+
+#banner3 .banner-box:hover {
+    transform: scale(1.05); /* Slightly enlarge the banner on hover */
+}
+
+/* Specific background images for each banner box */
+#banner3 .banner-box {
+    background-image: url("img/banner/b7.jpg"); /* Default background for the first banner */
+}
+
+#banner3 .banner-box2 {
+    background-image: url("img/banner/b4.jpg"); /* Background for the second banner */
+}
+
+#banner3 .banner-box3 {
+    background-image: url("img/banner/b18.jpg"); /* Background for the third banner */
+}
+
+#banner3 h2 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 25px;
+    margin: 0; /* Ensure there's no unwanted margin */
+}
+
+#banner3 h3 {
+    color: #c61010; /* Red color for emphasis */
+    font-weight: 800;
+    font-size: 15px;
+    margin: 10px 0 0 0; /* Adds space between the h2 and h3 */
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    #banner3 {
+        padding: 0 20px; /* Reduce padding on smaller screens */
+    }
+
+    #banner3 .banner-box {
+        min-width: 100%; /* Banners will take full width on smaller screens */
+        height: auto; /* Adjust height to auto for better responsiveness */
+    }
+}
+
+
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 30px 50px;
+    border-radius: 8px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+#newsletter .newsletter-text h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+#newsletter .newsletter-text p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    flex-grow: 1;
+    min-width: 250px;
+}
+
+.newsletter-form button {
+    padding: 10px 25px;
+    font-size: 16px;
+    background-color: #0aeca8;
+    color: white;
+   
+}
+
+
+
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 30px 50px;
+    background-color: #ffffff;
+    color: white;
+    gap: 20px;
+}
+
+#footer .col {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+#footer .logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+#footer h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#footer p, #footer a {
+    font-size: 14px;
+    color: #bbb;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#footer a:hover {
+    color: white;
+}
+
+#footer .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #000000;
+    font-size: 18px;
+}
+
+.social-icons a:hover {
+    color: #f9c900; /* Change color on hover */
+}
+
+.app-icons img {
+    width: 120px;
+    margin: 10px 0;
+}
+
+#footer .install p {
+    margin-bottom: 15px;
+}
+
+#footer .install img {
+    width: 100px;
+    margin: 5px;
+}
+
+#footer .copyright {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #footer {
+        flex-direction: column;
+        text-align: center;
     }
 }
