@@ -54,7 +54,9 @@ body{
 
 /* Header Start */
 
-
+.logo{
+    /* background: rgb(232, 165, 165); */
+}
 
 
 
@@ -65,10 +67,7 @@ body{
     justify-content: space-between;
     padding: 20px 80px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-    z-index: 999;
-    position: sticky;
-    top: 0;
-    left: 0;
+    
 }
 
 
@@ -123,7 +122,140 @@ body{
 
  }
 
+
+<<<<<<< HEAD
+ #hero {
+    background: url('img/hero4.png') no-repeat center center/cover; /* Replace with your image */
+    height: 90vh;
+    width: 100% ;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 80px;
+   
+   
+    
+  
+   
+}
+
+
+
+#hero h4 {
+    
+    padding-bottom: 15px;
+  
+}
+
+#hero h2 {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#hero h1 {
+    
+    color: rgb(64, 127, 96);
+}
+
+#hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#hero .btn {
+   background-image: url('img/button.png');
+   background-color: transparent;
+   color: rgb(12, 76, 76);
+   border: 0;
+   padding: 14px 80px 14px 65px;
+   cursor: pointer;
+   font-size: 15px;
+   font-weight: 700;
+   
+}
+
+
+
+#feature {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.section-p1 {
+    padding: 40px 0;
+}
+
+.fe-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+    width: 150px;
+    text-align: center;
+}
+
+.fe-box img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+#feature .fe-box h6 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1;
+    border-radius: 4px;
+    color: #095f37;
+    background-color: #e1e7d8;
+    padding: 9px 8px 6px 8px;
+   
+}
+
+
+
+
+
+
+
+#feature .fe-box:nth-child(2) h6 {
+
+    background-color: rgb(200, 248, 200);
  
+}
+
+
+
+#feature .fe-box:nth-child(3) h6 {
+
+    background-color: rgb(200, 207, 248);
+ 
+}
+
+#feature .fe-box:nth-child(4) h6 {
+
+    background-color: rgb(248, 200, 246);
+ 
+}
 
 #feature .fe-box:nth-child(5) h6 {
 
@@ -152,9 +284,7 @@ body{
     .fe-box {
         width: 100%;
         margin-bottom: 20px;
-    }
-}
-
+=======
 
  #product1 {
     text-align: center;
@@ -232,7 +362,9 @@ body{
     transition: background-color 0.3s ease;
 }
 
-
+.pro a:hover {
+    /* background-color: #ff3b3b; */
+}
 
 @media (max-width: 768px) {
     .pro {
@@ -524,5 +656,6 @@ body{
     #footer {
         flex-direction: column;
         text-align: center;
+>>>>>>> parent of 7970446 (Merge branch 'main' into FeaturedProduct-Section)
     }
 }
