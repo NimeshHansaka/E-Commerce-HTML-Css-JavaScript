@@ -298,6 +298,7 @@ body{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 }
 #sm-banner .banner-box {
     display: flex;
@@ -311,7 +312,14 @@ body{
     background-position: center;
     padding: 30px;
     transition: background 0.3s ease; /* Smooth hover effect */
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
+
+/* Optional hover effect for smooth transition */
+#sm-banner .banner-box:hover {
+    background-position: center top; /* Example hover effect */
+}
+
 #sm-banner .banner-box2 {
     min-width: 580px;
     background-image: url("img/banner/b10.jpg");
@@ -339,9 +347,17 @@ body{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 50px;
     gap: 20px; /* Adds space between the banners */
+    width: 100%; /* Make sure the banner section spans full width */
+    box-sizing: border-box; /* Ensures padding is included in width */
 }
+
+/* Ensure the parent container does not restrict full width */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
 #banner3 .banner-box {
     display: flex;
     flex-direction: column;
@@ -382,32 +398,52 @@ body{
 }
 /* Media query for small screens */
 @media (max-width: 768px) {
+   
+    #sm-banner .banner-box{
+        min-width: 100%; /* Banners will take full width on smaller screens */
+        height: auto; /* Adjust height to auto for better responsiveness */
+
+        margin: 10px;
+
+
+    }
+   
+
     #banner3 {
         padding: 0 20px; /* Reduce padding on smaller screens */
     }
     #banner3 .banner-box {
         min-width: 100%; /* Banners will take full width on smaller screens */
         height: auto; /* Adjust height to auto for better responsiveness */
+        
+
+    
     }
 }
 #newsletter {
+    margin: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f1f1f1;
+    background-image:url("img/banner/b14.png");
+    background-color: #10063a;
+    background-position: 20% 30%;
+    background-repeat: no-repeat;
     padding: 30px 50px;
     border-radius: 8px;
-    margin: 50px 0;
     flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in the width */
 }
+
 #newsletter .newsletter-text h4 {
     font-size: 24px;
     font-weight: 700;
-    color: #333;
+    color: #ffffff;
 }
 #newsletter .newsletter-text p {
     font-size: 16px;
-    color: #666;
+    color: #cfcfcf;
     margin-top: 10px;
 }
 .newsletter-form {
@@ -437,146 +473,136 @@ body{
     flex-wrap: wrap;
     align-items: flex-start;
     padding: 30px 50px;
-    background-color: #ffffff;
-    color: white;
+    background-color: #fefefe; /* Dark background for contrast */
+    color: #bbb; /* Light gray text color */
     gap: 20px;
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
+
 #footer .col {
     flex: 1;
     margin-bottom: 20px;
 }
+
 #footer .logo {
     width: 150px;
     margin-bottom: 20px;
 }
+
 #footer h4 {
     font-size: 18px;
     margin-bottom: 15px;
+    color: #000000; /* Highlighted headings */
 }
+
 #footer p, #footer a {
     font-size: 14px;
-    color: #bbb;
+    color: #050505; /* Light gray for text and links */
     text-decoration: none;
     margin-bottom: 10px;
     display: block;
 }
+
 #footer a:hover {
-    color: white;
+    color: #ffffff; /* White on hover */
 }
+
 #footer .social-icons a {
     display: inline-block;
     margin-right: 10px;
-    color: #000000;
+    color: #000000; /* Light gray for icons */
     font-size: 18px;
 }
-.social-icons a:hover {
-    color: #f9c900; /* Change color on hover */
+
+#footer .social-icons a:hover {
+    color: #000000; /* Gold highlight on hover */
 }
+
 .app-icons img {
     width: 120px;
     margin: 10px 0;
 }
+
 #footer .install p {
     margin-bottom: 15px;
 }
+
 #footer .install img {
     width: 100px;
     margin: 5px;
 }
+
 #footer .copyright {
     flex-basis: 100%;
     text-align: center;
     margin-top: 20px;
-    border-top: 1px solid #555;
+    border-top: 1px solid #555; /* Gray border */
     padding-top: 10px;
     font-size: 12px;
     color: #bbb;
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #footer {
-        flex-direction: column;
+      
         text-align: center;
     }
 }
 
-
-#feature{
+#feature {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-
+    gap: 20px;
+    width: 100%; /* Full width */
+    padding: 20px 0;
+    margin: 10px;
 }
 
-#feature .fe-box{
+#feature .fe-box {
     width: 180px;
     text-align: center;
     padding: 25px 15px;
-    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1); /* Softer shadow */
     border: 1px solid #cce7d0;
     border-radius: 4px;
     margin: 15px 0;
+    background-color: #fff; /* White background for contrast */
 }
-#feature .fe-box h6{
-   
-    padding: 9px 8px 6px 8px;
+
+#feature .fe-box h6 {
+    padding: 9px 8px;
     line-height: 1;
     border-radius: 4px;
-    color: #000000;
-    background-color: violet;
-
-  
+    color: #000000; /* Black text */
+    background-color: violet; /* Default background color */
 }
 
-#feature .fe-box img{
-   
-   width: 100%;
-   margin-bottom: 10px;
-
-  
+#feature .fe-box img {
+    width: 100%;
+    margin-bottom: 10px;
 }
 
-
-
-
-#feature .fe-box:nth-child(2) h6{
-   
-    
-    background-color: rgb(130, 197, 238);
-
-  
+/* Custom Backgrounds for Specific Boxes */
+#feature .fe-box:nth-child(2) h6 {
+    background-color: rgb(130, 197, 238); /* Light blue */
 }
 
-#feature .fe-box:nth-child(3) h6{
-   
-    
-    background-color: rgb(170, 238, 130);
-
-  
+#feature .fe-box:nth-child(3) h6 {
+    background-color: rgb(170, 238, 130); /* Light green */
 }
 
-#feature .fe-box:nth-child(4) h6{
-   
-    
-    background-color: rgb(238, 215, 130);
-
-  
+#feature .fe-box:nth-child(4) h6 {
+    background-color: rgb(238, 215, 130); /* Light yellow */
 }
 
-#feature .fe-box:nth-child(5) h6{
-   
-    
-    background-color: rgb(153, 130, 238);
-
-  
+#feature .fe-box:nth-child(5) h6 {
+    background-color: rgb(153, 130, 238); /* Light purple */
 }
 
-#feature .fe-box:nth-child(6) h6{
-   
-    
-    background-color: rgb(130, 238, 130);
-
-  
+#feature .fe-box:nth-child(6) h6 {
+    background-color: rgb(130, 238, 130); /* Green */
 }
-
